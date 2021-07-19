@@ -84,21 +84,25 @@ body{
 	opacity: 50%;
 }
 header{
-position: absolute;
+position: fixed;
 top: 0%;
 width: 100%;
 display: flex;
 justify-content: center;
+z-index: 9999;
+}
+.active{
+	color: rgb(234,81,62);
 }
 .container {
-	max-width: 1200px;
+	max-width: 1100px;
 	width: 100%;
 	margin: 0 auto;
 	/* height: 10vh; */
 	/* border: 1px solid grey; */
 }
 .nav{
-	width: 15%;
+	width: 20%;
 	/* border: 1px solid grey; */
 	margin: 20px auto;
 }
@@ -121,6 +125,7 @@ small {
 	margin-top: 20px;
 	font-size: 30px;
 	font-weight: bold;
+	margin-left: 10px;
 }
 .flex {
 	display: flex;
@@ -168,51 +173,72 @@ h1{
 }
 h2{
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 16px;
 	text-align: center;
 	margin-bottom: 30px;
 }
 h3{
 	text-align: center;
 	color: white;
+	font-size: 24px;
 }
 .btn{
-	color: tomato;
+	padding: 15px;
+	background-color: rgb(234,81,62);
+	text-transform: uppercase;
+	border: none;
+
 }
 h4{
 	text-transform: uppercase;
 	text-align: center;
 	margin-top: 30px;
+	font-size: 24px;
 }
 .box-1{
 	background-color: rgb(92,189,157);
 	/* flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: 400px; */
-	height: 200px;
-	width: 200px;
+	height: 250px;
+	width: 250px;
+	font-size: 18px;
 }
 .box-2{
 	background-color: rgb(230,127,49);
-	height: 200px;
-	width: 200px;
+	height: 250px;
+	width: 250px;
 }
 .box-3{
 	background-color: rgb(57,152,219);
-	height: 200px;
-	width: 200px;
+	height: 250px;
+	width: 250px;
 }
 .box-4{
     background-color:rgb(104,205,115) ;	
-	height: 200px;
-	width: 200px;
+	height: 250px;
+	width: 250px;
 }
 .box{
 	display: flex;
 	flex-direction: row;
 	flex-shrink: 1;
-	justify-content: space-around;
 	text-align: center;
+	font-size: 32px;
+	justify-content: space-between;
+	margin-right: 125px;
+	margin-left: 125px;
+}
+.far{
+	font-size: 32px;
+}
+.line {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.808);
+	width: 200px;
+	margin: auto;
+	line-height: 1.5;
+	margin-bottom: 10px;
+	margin-top: 30px;
 }
 
 /*---portfolio-img--*/
@@ -226,8 +252,8 @@ h4{
 }
 
 .port-div{
-	width: 280px;
-	height: 280px;
+	width: 250px;
+	height: 250px;
 	margin-bottom: 20px
 }
 .port-div img{
@@ -240,21 +266,30 @@ h4{
 	justify-content: space-between;
 }
 .our-member{
-   width: 200px;
-   height: 200px;
+   width: 250px;
+   height: 250px;
 }
 
 .our-member img {
 	width: 100%;
 	border-radius: 50%;
 }
+.i{
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 20px;
+	text-align: center;
+    margin-left: 480px;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
 .graph{
 	justify-content: space-between;
-	margin-left: 50px;
+	margin-left: 100px;
 }
 
 .team-text,.text_right{
-	width: 40%;
+	width: 100%;
 }
 
 
@@ -284,17 +319,50 @@ h4{
 
 /*---contect us--*/
 iframe{
-	width: 1000px;
+	width: 1100px;
 	height: 250px;
-	margin-left: 100px;
+	/* margin-left: 100px; */
 }
 .contect{
 	width: 80%;
-	padding: 20px;
-	margin-left: 80px;
+	/* padding: 20px; */
+	margin-left: 30px;
+	margin-right: 20px;
+	top: 0;
 }
-.details{
+.context-text{
+	margin-bottom: 200px;
+}
+strong{
+	color:blue;
+}
+span{
+	color: green;
+}
+.h{
+	color: #EA523E;
+}
+ .details{
+	width: 100px;
+	margin-top: 40px;
+	margin-right: 135px;
 	margin-left: 40px;
+}
+#lname{
+	height: 50px;
+	width: 400px;
+}
+#msg{
+	height: 100px;
+	width: 400px;
+}
+#submit{
+	color: white;
+	height: 50px;
+	width: 400px;
+	background-color:#EA523E;
+	border: none;
+	margin-bottom: 200px;
 }
 .footer {
 	color: black;
@@ -302,15 +370,21 @@ iframe{
 	text-align: center;
 }
 button{
-	background-color: orangered;
+	background-color: rgb(234,81,62);
 	color: white;
+	padding: 10px 50px;
+	border: none;
 }
-
+button a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
 
 /*----gallery----*/
 .aside{
 	background-color: rgb(234,81,62);
-	width: 300px;
+	width: 350px;
 	height: 100vh;
 	position: fixed;
 	left: 0;
@@ -318,6 +392,7 @@ button{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	padding: 30px;
 }
 
 .logo{
